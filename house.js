@@ -43,7 +43,7 @@ function House (name, rLimit, sqftLimit) {
       if(this.rooms.hasOwnProperty(arguments[i])) {
         delete this.rooms[arguments[i]];
       }
-      else if(Array.isArray(arguments[i])) { // Nested rooms such as a closet or bathroom
+      else if(Array.isArray(arguments[i])) {
         for(var j =0; j < arguments[i].length; j++) {
           this.removeRooms(arguments[i][j]);
         }

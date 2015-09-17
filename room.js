@@ -32,5 +32,4 @@ function Room (data) {
   this.calcSqft();
 }
 
-
 module.exports = Room;

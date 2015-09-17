@@ -84,7 +84,11 @@ describe("House", function () {
 		expect(h1.rooms[r2.name]).to.be.equal(r2);
 	});
 	it("provides the total sqft of all its rooms", function () {
-
+		var h1 = new House("Coding Mansion");
+		var r1 = new Room({width: 5, length: 8, name: "Red"});
+		var r2 = new Room({width: 10, length: 20, name: "Blue"});
+		h1.addRooms([r1,r2]);
+		expect(h1.sqft).to.be.equal(240);
 	});
 
 /*
